@@ -14,9 +14,11 @@ export async function run(): Promise<void> {
     case 'getPolicyNameByProfileName':
       await policyService.getPolicyNameByProfileName(inputs);
       break;
-    case 'preparePipelineResults':
+    case 'preparePipelineResults': {
+       core.info(`inputs.action ${inputs.action}, inputs.action`);
       await pipelineResultsService.preparePipelineResults(inputs);
       break;
+    }
     case 'preparePolicyResults':
       await policyResultsService.preparePolicyResults(inputs);
       break;
