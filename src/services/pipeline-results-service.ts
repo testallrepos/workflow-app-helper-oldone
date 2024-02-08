@@ -12,7 +12,9 @@ import { getApplicationFindings } from './findings-service';
 const LINE_NUMBER_SLOP = 3; //adjust to allow for line number movement
 
 export async function preparePipelineResults(inputs: Inputs): Promise<void> {
+  core.info(`pipeline-results-service.ts ${inputs}, pipeline-results-service.ts`);
   const repo = inputs.source_repository.split('/');
+  
   const ownership = {
     owner: repo[0],
     repo: repo[1],
