@@ -28995,8 +28995,10 @@ const parseInputs = (getInput) => {
         source_repository, fail_checks_on_policy, fail_checks_on_error };
 };
 exports.parseInputs = parseInputs;
+const core = __importStar(__nccwpck_require__(749));    
 const vaildateScanResultsActionInput = (inputs) => {
     console.log(inputs);
+    
      core.info("INPUTSSSSSS INPUTSSSSSS INPUTSSSSSS", inputs);
     core.info(`No application found with name ${inputs}`);
     if (!inputs.token || !inputs.check_run_id || !inputs.source_repository) {
