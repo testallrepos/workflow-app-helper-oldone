@@ -29005,10 +29005,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseInputs = parseInputs;
 const core = __importStar(__nccwpck_require__(749));    
 const vaildateScanResultsActionInput = (inputs) => {
+    core.info('No application found with name', inputs.source_repository);
     console.log("inputs.token--->",inputs.token);
     
      core.info("INPUTSSSSSS INPUTSSSSSS INPUTSSSSSS", inputs.check_run_id);
-    core.info('No application found with name', inputs.source_repository);
+    
     if (!inputs.token || !inputs.check_run_id || !inputs.source_repository) {
         return false;
     }
