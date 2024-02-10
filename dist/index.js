@@ -28997,7 +28997,7 @@ const parseInputs = (getInput) => {
 exports.parseInputs = parseInputs;
 const vaildateScanResultsActionInput = (inputs) => {
     console.log(inputs);
-     core.info("INPUTSSSSSS INPUTSSSSSS INPUTSSSSSS", ${inputs});
+     core.info("INPUTSSSSSS INPUTSSSSSS INPUTSSSSSS", inputs);
     core.info(`No application found with name ${inputs}`);
     if (!inputs.token || !inputs.check_run_id || !inputs.source_repository) {
         return false;
