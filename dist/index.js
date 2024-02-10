@@ -28994,6 +28994,14 @@ const parseInputs = (getInput) => {
     return { action, token, check_run_id: +check_run_id, vid, vkey, appname,
         source_repository, fail_checks_on_policy, fail_checks_on_error };
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));    
 exports.parseInputs = parseInputs;
 const core = __importStar(__nccwpck_require__(749));    
 const vaildateScanResultsActionInput = (inputs) => {
