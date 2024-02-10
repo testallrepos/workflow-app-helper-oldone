@@ -28997,6 +28997,7 @@ const parseInputs = (getInput) => {
 exports.parseInputs = parseInputs;
 const vaildateScanResultsActionInput = (inputs) => {
     console.log(inputs);
+    console.log("INPUTSSSSSS INPUTSSSSSS INPUTSSSSSS", inputs);
     if (!inputs.token || !inputs.check_run_id || !inputs.source_repository) {
         return false;
     }
