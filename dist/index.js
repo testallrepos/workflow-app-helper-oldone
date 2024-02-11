@@ -28976,6 +28976,7 @@ var Actions;
     Actions["PreparePolicyResults"] = "preparePolicyResults";
 })(Actions || (exports.Actions = Actions = {}));
 const parseInputs = (getInput) => {
+     
     const action = getInput('action', { required: true });
     if (!Object.values(Actions).includes(action)) {
         throw new Error(`Invalid action: ${action}. It must be one of '${Object.values(Actions).join('\' or \'')}'.`);
@@ -28988,6 +28989,8 @@ const parseInputs = (getInput) => {
     const source_repository = getInput('source_repository');
     const fail_checks_on_policy = getInput('fail_checks_on_policy') === 'true';
     const fail_checks_on_error = getInput('fail_checks_on_error') === 'true';
+    core.info('No AaaaAAAAAAAA AAAABBBBBBBBBBBBBBBBBBB', source_repository);
+     core.info('No AaaaAAAAAAAA check_run_id', check_run_id);
     if (source_repository && source_repository.split('/').length !== 2) {
         throw new Error('source_repository needs to be in the {owner}/{repo} format');
     }
