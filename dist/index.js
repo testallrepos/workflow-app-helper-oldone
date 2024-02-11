@@ -29482,7 +29482,7 @@ async function preparePolicyResults(inputs) {
         status: Checks.Status.Completed,
     };
     if (!(0, inputs_1.vaildateScanResultsActionInput)(inputs)) {
-        core.info("Second", core.info("FIRSTONE",inputs);
+         core.info("Seconeddddd",inputs);
         core.setFailed('token, check_run_id and source_repository are required.');
         await (0, check_service_1.updateChecks)(octokit, checkStatic, inputs.fail_checks_on_error ? Checks.Conclusion.Failure : Checks.Conclusion.Success, [], 'Token, check_run_id and source_repository are required.');
         return;
