@@ -8,8 +8,9 @@ import * as policyResultsService from './services/policy-results-services';
  * Runs the action.
  */
 export async function run(): Promise<void> {
+ 
   const inputs = parseInputs(core.getInput);
-
+ core.info("ONE ONE ",inputs);
   switch (inputs.action) {
     case 'getPolicyNameByProfileName':
       await policyService.getPolicyNameByProfileName(inputs);
