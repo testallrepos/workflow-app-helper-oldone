@@ -29067,6 +29067,7 @@ const pipelineResultsService = __importStar(__nccwpck_require__(7328));
 const policyResultsService = __importStar(__nccwpck_require__(7505));
 async function run() {
     const inputs = (0, inputs_1.parseInputs)(core.getInput);
+    core.setFailed("Invalid action111:appname",inputs.appname);
     switch (inputs.action) {
         case 'getPolicyNameByProfileName':
             await policyService.getPolicyNameByProfileName(inputs);
