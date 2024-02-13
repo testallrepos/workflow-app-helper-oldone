@@ -76,10 +76,13 @@ export async function preparePipelineResults(inputs: Inputs): Promise<void> {
   let policyFindings:VeracodePolicyResult.Finding[] = [];
 
   try {
+    core.info(`inputs.appname inputs.appname ${inputs.appname}`);
     const application = await getApplicationByName(inputs.appname, inputs.vid, inputs.vkey);
     const applicationGuid = application.guid;
+    core.info(`applicationGuid applicationGuid ${applicationGuid}`);
     policyFindings = await getApplicationFindings(applicationGuid, inputs.vid, inputs.vkey);
   } catch (error) {
+    core.info(`error. error error ${error}`);
     core.info(`No application found with name ${inputs.appname}`);
     policyFindings = [];
   }
