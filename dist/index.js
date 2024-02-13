@@ -29337,7 +29337,7 @@ async function preparePipelineResults(inputs) {
         const application = await (0, application_service_1.getApplicationByName)(inputs.appname, inputs.vid, inputs.vkey);
         const applicationGuid = application.guid;
         policyFindings = await (0, findings_service_1.getApplicationFindings)(applicationGuid, inputs.vid, inputs.vkey);
-        core.info("policyFindings policyFindings",policyFindings);
+        core.info("policyFindings policyFindings", ...policyFindings);
     }
     catch (error) {
         core.info(`No application found with name ${inputs.appname}`);
